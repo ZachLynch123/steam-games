@@ -8,7 +8,7 @@ class Home extends Component {
     constructor(props){
         super(props)
         this.state = {
-            steamid: "",
+            steamid: ""
         }
     }
 
@@ -17,23 +17,33 @@ class Home extends Component {
         event.preventDefault()
         if(!this.props.user){
             this.props.addUser(this.state)
-            return <Redirect to={`/users/${this.state.steamid}`} />
+        } else {
         }
+        this.props.history.push(`/users/${this.state.steamid}`)
     }
 
     handleChange(event){
         this.setState({
-            [event.target.steamid]: event.target.value
+            steamid: event.target.value
         })
+    }
+
+    redirectOrRenderForm = () => {
+            return (
+                <form onSubmit={this.handleSubmit.bind(this)}>
+                    <label>new</label>
+                    <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.steamid} />
+                    <input type="submit"/>
+                </form>
+            )
     }
 
     render() {
         // debugger
         return (
-            <form onSubmit={this.handleSubmit.bind(this)}>
-                <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.steamid} name="steamid"/>
-                <input type="submit"/>
-            </form>
+            <>
+            {this.redirectOrRenderForm()}
+            </>
         )
     }
 }
