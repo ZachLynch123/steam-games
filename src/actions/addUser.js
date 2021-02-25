@@ -1,4 +1,4 @@
-export default  addUser = user => {
+const addUser = user => {
     return (dispatch) => {
         const options = {
             method: "POST", 
@@ -16,3 +16,4 @@ export default  addUser = user => {
         })
     }
 }
+export default addUser
