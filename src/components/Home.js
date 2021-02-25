@@ -19,7 +19,7 @@ class Home extends Component {
             this.props.addUser(this.state)
         } else {
         }
-        this.props.history.push(`/users/${this.state.steamid}`)
+        this.props.history.push(`/user/${this.state.steamid}`)
     }
 
     handleChange(event){
@@ -33,7 +33,7 @@ class Home extends Component {
                 <form onSubmit={this.handleSubmit.bind(this)}>
                     <label>new</label>
                     <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.steamid} />
-                    <input type="submit"/>
+                    <input type="submit" value="Submit"/>
                 </form>
             )
     }
