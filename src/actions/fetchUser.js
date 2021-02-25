@@ -1,7 +1,6 @@
 const fetchUser = user => {
     return (dispatch) => {
-        console.log(this.state);
-        console.log(dispatch);
+        console.log(user);
         fetch("http://localhost:3000/users/")
     .then(res => res.json())
     .then(user => {

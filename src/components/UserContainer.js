@@ -7,8 +7,8 @@ import UserBox from './UserBox'
 export class UserContainer extends React.Component {
 
   componentDidMount(){
-    this.props.fetchUser()
-    console.log(this.props);
+    this.props.fetchUser(this.props.location.pathname.split("/").pop())
+    console.log();
   }
 
   render() {

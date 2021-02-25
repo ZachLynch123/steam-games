@@ -8,7 +8,6 @@ const addUser = user => {
             }, 
             body: JSON.stringify({user})
         }
-        console.log("RUnning!");
         fetch(`http://localhost:3000/users`, options)
         .then(res => res.json())
         .then(user => {
