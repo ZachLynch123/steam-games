@@ -1,15 +1,9 @@
 import React from "react";
 import { connect } from 'react-redux';
 import fetchUser from '../actions/fetchUser';
-import FriendsContainer from "./FriendsContainer";
 
 export class UserBox extends React.Component {
 
-
-
-  // componentDidMount(){
-  //   this.props.fetchUser()
-  // }
 
   render() {
     const user = this.props.user.user.user

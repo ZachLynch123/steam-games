@@ -1,5 +1,4 @@
 import React from 'react';
-import FriendsContainer from "./FriendsContainer";
 import UserContainer from './UserContainer';
 import { Route } from 'react-router-dom'
 import Home from './Home'

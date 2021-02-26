@@ -6,7 +6,7 @@ import fetchFriends from '../actions/fetchFriends';
 class FriendsContainer extends React.Component {
 
   componentDidMount() {
-    this.props.fetchFriends()
+    this.props.fetchFriends(this.props.friends.user.user.id)
   }
   render() {
     
@@ -34,4 +34,4 @@ const mapStateToProps = friends => {
 
 
 
-export default connect(mapStateToProps, {fetchFriends})(FriendsContainer);
+export default connect(mapStateToProps, {fetchFriends}) (FriendsContainer);
