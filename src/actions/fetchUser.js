@@ -1,7 +1,6 @@
 const fetchUser = user => {
     return (dispatch) => {
         String(user)
-        console.log(user);
         fetch(`http://localhost:3000/users/${user}`)
     .then(res => res.json())
     .then(user => {

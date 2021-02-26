@@ -2,7 +2,6 @@ const  userReducer = (state={user: 1, loading: true}, action) => {
 
     switch(action.type) {
         case "FETCH_USER":
-            console.log(action);
             return {
                 
                 user: action.payload

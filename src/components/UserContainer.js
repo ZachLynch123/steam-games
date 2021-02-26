@@ -8,7 +8,6 @@ export class UserContainer extends React.Component {
 
   componentDidMount(){
     this.props.fetchUser(this.props.location.pathname.split("/").pop())
-    console.log(this.props);
   }
 
   render() {

@@ -6,6 +6,7 @@ import fetchFriends from '../actions/fetchFriends';
 class FriendsContainer extends React.Component {
 
   componentDidMount() {
+    console.log(this.props);
     this.props.fetchFriends(this.props.friends.user.user.id)
   }
   render() {
@@ -16,9 +17,9 @@ class FriendsContainer extends React.Component {
     }
     return (
       <div className="friends-container">
-          {friends.map(friend => {
+          {/* {friends.map(friend => {
             return <Friend friend={friend}/>
-          })}
+          })} */}
       </div>
     );
   }
