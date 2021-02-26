@@ -2,12 +2,13 @@ import React from "react";
 import Friend from "../components/Friend";
 import { connect } from 'react-redux';
 import fetchFriends from '../actions/fetchFriends';
+import fetchUser from '../actions/fetchUser'
 
 class FriendsContainer extends React.Component {
 
   componentDidMount() {
-    console.log(this.props);
-    this.props.fetchFriends(this.props.friends.user.user.id)
+    this.props.fetchFriends(window.location.href.split("/").pop())
+    console.log();
   }
   render() {
     
@@ -17,9 +18,9 @@ class FriendsContainer extends React.Component {
     }
     return (
       <div className="friends-container">
-          {/* {friends.map(friend => {
+          {friends.map(friend => {
             return <Friend friend={friend}/>
-          })} */}
+          })}
       </div>
     );
   }
@@ -35,4 +36,4 @@ const mapStateToProps = friends => {
 
 
 
-export default connect(mapStateToProps, {fetchFriends}) (FriendsContainer);
+export default connect(mapStateToProps, {fetchFriends, fetchUser}) (FriendsContainer);

@@ -4,7 +4,8 @@ const  userReducer = (state={user: 1, loading: true}, action) => {
         case "FETCH_USER":
             return {
                 
-                user: action.payload
+                user: action.payload,
+                loading: false
             }
         case "ADD_USER":
             return{
