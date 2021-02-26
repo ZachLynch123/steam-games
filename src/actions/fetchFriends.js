@@ -1,4 +1,5 @@
 const fetchFriends = friends => {
+    console.log(friends);
     return (dispatch) => {
         fetch("http://localhost:3000/friends/")
             .then(res => res.json())

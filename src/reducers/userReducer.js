@@ -1,4 +1,4 @@
-const  userReducer = (state={user: 1}, action) => {
+const  userReducer = (state={user: 1, loading: true}, action) => {
 
     switch(action.type) {
         case "FETCH_USER":
